@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      background-color: var(--color-yellow);
+    }
+
+    @font-face {
+      font-family: "FigTree";
+      src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+    }
+
+    @font-face {
+      font-family: "FigTree-semibold";
+      src: url(assets/fonts/static/Figtree-SemiBold.ttf);
+    }
+
+    @font-face {
+      font-family: "FigTree-extrabold";
+      src: url(assets/fonts/static/Figtree-ExtraBold.ttf);
+    }
+  
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    :root{
+      --color-yellow: #F4D04E;
+      --color-white: #FFFFFF;
+      --color-black: #111111;
+      --color-grey: #6B6B6B;
+    }
+
+    h1, h2, h3, h4{
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+
+    h1{
+      font-family: "FigTree-extrabold";
+      font-size: 1.5rem;
+      font-weight: bolder;
+      color: var(--color-black);
+    }
+
+    h2{
+      font-family: "FigTree-semibold";
+      font-size: 1rem;
+      color: var(--color-grey);
+    }
+
+    h3{
+      font-family: "FigTree-semibold";
+      font-size: 0.875rem;
+      color: var(--color-black);
+    }
+
+    h4{
+      font-family: "FigTree-extrabold";
+      font-size: 0.875rem;
+      font-weight: bolder;
+      color: var(--color-black);
+    }
+
+    main{
+      display: grid;
+      place-items: center;
+      height: 100vh;
+    }
+
+    .container{
+      display: flex;
+      flex-direction: column;
+      flex: auto;
+      height: auto;
+      max-width: 24rem;
+      background-color: var(--color-white);
+      padding: 1.5rem;
+      margin: 0 1.5rem;
+      gap: 1.5rem;
+      border-radius: 20px;
+      border: 1px black solid;
+      box-shadow: black 8px 8px;
+      text-align: left;
+      text-wrap: wrap;
+    }
+
+    .card-banner{
+      border-radius: 10px;
+    }
+
+    button{
+      background-color: var(--color-yellow);
+      border: 0;
+      padding: 4px 12px;
+      border-radius: 4px;
+    }
+
+    .content{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .author-section{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar-icon{
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .container .content #header:hover{
+      color: var(--color-yellow);
+      cursor: pointer;
+    }
+    
+
+
+    @media (max-width: 375px){
+      h1{
+        font-size: 1.25rem;
+      }
+
+      h2{
+        font-size: 0.875rem;
+
+      }
+
+      h3{
+        font-size: 0.75rem;
+      }
+
+      h4{
+        font-size: 0.875rem;
+        font-weight: bolder;
+      }
+
+      .card-banner{
+        height: auto;
+        max-width: 100%;
+      }
+
+      .container{
+        margin: 0 1.5rem;
+        width: auto;
+        flex: auto;
+      }
+
+      
+    }
+
+    
+
+  </style>
+</head>
+<body>
+
+  <main>
+    <div class="container">
+      
+      <div class="image"><img src="assets/images/illustration-article.svg" class = "card-banner" alt="card-banner"></div>
+
+      <div class="content">
+        <button><h4>Learning</h4></button>
+        <h3>Published 21 Dec 2023</h3>
+        <h1 id = "header">HTML & CSS foundations</h1>
+        <div><h2>These languages are the backbone of every website,
+           defining structure, content, and presentation.
+        <h2></div>
+      </div>
+
+      <div class="author-section">
+        <div class="author-img"><img src="assets/images/image-avatar.webp" class = "avatar-icon" alt="avatar-icon"></div>
+        <h4>Greg Hooper</h4>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
