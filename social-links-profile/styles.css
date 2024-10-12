@@ -1,0 +1,114 @@
+/* Global */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+body{
+    background-color: var(--grey-900);
+}
+
+/* Variables */
+
+:root{
+    --green: hsl(75,94%, 57%);
+    --white: hsl(0,0%, 100%);
+    --grey-700: hsl(0,0%,20%);
+    --grey-800: hsl(0,0%,12%);
+    --grey-900: hsl(0,0%,8%);
+
+}
+
+/* Typography */
+h1{
+    font-weight: 1.5rem;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    font-weight: 400;
+}
+
+.container .user h2{
+    color: var(--green);
+}
+
+/* Main */
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--grey-800);
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+    color: var(--white);
+    border-radius: 12px;
+    text-align: center;
+    width: 384px;
+    max-width: 100%;
+}
+
+.avatar{
+    height: 88px;
+    width: 88px;
+    border-radius: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.user-description{
+    margin: 1.5rem 0;
+}
+
+.link-container{
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+.link{
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: var(--grey-700);
+}
+
+.link:hover{
+    cursor: pointer;
+    background-color: var(--green);
+    color:var(--grey-700);
+}
+
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 456px;
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 375px) {
+    .container{
+        width: 327px;
+        padding: 1.5rem;
+    }
+}
