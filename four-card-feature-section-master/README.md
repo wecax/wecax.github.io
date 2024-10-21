@@ -19,12 +19,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![screenshot](./screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/wecax/frontendmentor-solutions/tree/main/four-card-feature-section-master)
+- Live Site URL: [Github Pages](wecax.github.io/four-card-feature-section-master)
 
 ## My process
 
