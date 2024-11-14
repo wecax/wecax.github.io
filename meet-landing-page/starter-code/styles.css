@@ -1,0 +1,399 @@
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+/* Typography */
+
+@font-face {
+    font-family: "Red Hat Display";
+    font-weight: 500;
+    src: url(./assets/fonts/red-hat-display-v19-latin-500.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Red Hat Display";
+    font-weight: 900;
+    src: url(./assets/fonts/red-hat-display-v19-latin-900.woff2) format("woff2");
+}
+
+/* Variables */
+
+:root{
+    /* Primary */
+    --color-primary-cyan-600: #4D96A9;
+    --color-primary-cyan-300: #8FE3F9;
+    --color-primary-slate-900: #28283D;
+    --color-primary-slate-600: #87879D;
+    --color-primary-purple-600: #855FB1;
+    --color-primary-purple-300: #D9B8FF;
+
+    /* Neutral */
+    --color-neutral-white: #FAFAFA;
+
+    /* Typography */
+    --ff-primary: "Red Hat Display";
+    --fw-500: 500;
+    --fw-900: 900;
+
+}
+
+/* Utilities */
+
+body{
+  min-height: 100vh;
+  background-color: var(--color-neutral-white);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-900);
+}
+
+.text-primary-black{
+  color: var(--color-primary-slate-900);
+}
+
+.text-primary-white{
+  color: var(--color-neutral-white);
+}
+
+.text-primary-grey{
+  color: var(--color-primary-slate-600);
+}
+
+.h1{
+  font-size: 4rem;
+  color: var(--color-primary-slate-900);
+  font-weight: var(--fw-900);
+  line-height: 1.1;
+}
+
+.h2{
+  font-size: 2.5rem;
+  color: var(--color-primary-slate-900);
+  font-weight: var(--fw-900);
+  line-height: 1.1;
+}
+
+.body-text{
+  font-size: 1.125rem;
+  color: var(--color-primary-slate-600);
+  font-weight: var(--fw-500);
+}
+
+.overline{
+  font-size: 1rem;
+  color: var(--color-primary-cyan-600);
+  font-weight: var(--fw-900);
+  line-height: 1.1;
+  letter-spacing: 4px;
+}
+
+/* Buttons */
+
+.btn-1, .btn-2, .btn-3{
+  font-size: 1rem;
+  color: var(--color-neutral-white);
+  font-weight: var(--fw-900);
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  border: 0;
+}
+
+.btn-1{
+  background-color: var(--color-primary-cyan-600);
+}
+
+.btn-1:hover{
+  background-color: var(--color-primary-purple-600);
+}
+
+.btn-2{
+  background-color: var(--color-primary-purple-600);
+}
+
+.btn-2:hover{
+  background-color: var(--color-primary-cyan-600);
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-1 span{
+  color: var(--color-primary-cyan-300);
+}
+
+.btn-3 span{
+  color: var(--color-primary-purple-300);
+}
+
+.p-64{
+  padding: 4rem 0;
+}
+
+.pb-32{
+  padding-bottom: 2rem;
+}
+
+/* Main */
+
+header{
+  display: flex;
+  justify-content: center; 
+  padding-top: 5rem;
+}
+
+main{
+  text-align: center;
+  gap: 2rem
+}
+
+.flex, .flex-hero{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.flex-hero{
+  justify-content: space-around;
+}
+
+.hero-mobile{
+  display: none;
+}
+
+article{
+  max-width: 28rem;
+}
+
+.body-text {
+  max-width: 36.25rem;
+  overflow: hidden;
+}
+
+/* Dividers */
+
+.divider{
+  padding-top: 4rem;
+}
+
+.divider-two{
+  padding-top: 4.5rem;
+}
+
+.number-one, .number-two{
+  font-size: 1rem;
+  font-weight: var(--fw-900);
+  line-height: 1.5;
+  color: var(--color-primary-slate-600);
+  border: solid 1px var(--color-primary-slate-600);
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: var(--color-neutral-white);
+}
+
+.number-line{
+  background-color: var(--color-primary-slate-600);
+  height: 5rem;
+  width: 0.063rem;
+  margin-inline: auto;
+}
+
+
+/* Gallery section */
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-grid{
+  display: grid;
+  max-width: 70rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.gallery-grid img{
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+/* Text section */
+
+.text-2{
+  flex-direction: column;
+  margin-inline: auto;
+  text-align: center;
+  max-width: 34rem;
+}
+
+.text-2 .overline{
+  padding-bottom: 1rem;
+}
+
+.text-2 .h2{
+  padding-bottom: 2rem;
+}
+
+/* Footer Section */
+
+.footer-container::before {
+  content: "";
+  background-image: url(./assets/desktop/image-footer.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.footer-container{
+  background-color: var(--color-primary-cyan-600);
+  position: relative;
+  height: 20rem;
+  margin-top: -1.75rem;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.footer-container .h2,
+.footer-container .body-text{
+  color: var(--color-neutral-white);
+  max-width: 22rem;
+}
+
+.number-two{
+  position: relative;
+  z-index: 2;
+}
+
+.btn-3{
+  background-color: var(--color-primary-purple-600);
+}
+
+.btn-3:hover{
+  background-color: var(--color-primary-cyan-600);
+}
+
+/* Breakpoints */
+
+@media screen and (max-width: 1270px){
+  .flex-hero{
+    flex-direction: column;
+  }
+
+  .hero-left, .hero-right{
+    display: none;
+  }
+
+  .hero-mobile{
+    display: block;
+    padding-bottom: 4.5rem;
+  }
+
+  .gallery-container{
+    padding-inline: 2rem;
+  }
+
+  .gallery-grid{
+    gap: 1.5rem;
+  }
+
+  .footer-container{
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 26.75rem;
+    text-align: center;
+  }
+
+  .footer-container .body-text{
+    max-width: 31.5rem;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .gallery-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .flex-hero article{
+    text-align: center;
+    max-width: 25rem;
+    text-wrap: balance;
+  }
+
+  
+}
+
+@media screen and (max-width: 414px){
+  .h1{
+    font-size: 2.5rem;
+  }
+
+  .h2{
+    font-size: 2rem;
+  }
+
+  .body-text{
+    font-size: 0.75rem;
+  }
+
+  .buttons{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex-hero article{
+    max-width: 19rem;
+  }
+  
+  .text-2, .footer-container .body-text{
+    max-width: 19.5rem;
+  }
+
+  .footer-container::before{
+    background-image: url(assets/mobile/image-footer.jpg);
+  } 
+}
+
+
+
+
+
+
+
