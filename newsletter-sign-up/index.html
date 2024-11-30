@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <script defer src="index.js"></script>
+
+</head>
+<body>
+
+  <main class="card">
+    <!-- Image -->
+    <picture>
+      <img class="hero-img-mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="hero-mobile">
+      <img class="hero-img-desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="hero-desktop">
+    </picture>
+
+    <!-- Content --> 
+    <div class="content">
+      <header class="header-text pb-24">Stay Updated!</header>
+      <p class="body-text pb-24">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="pb-40">
+        <li>
+          <img src="assets/images/icon-list.svg" alt="check-icon">
+          <p class="body-text ">Product discovery and building what matters</p>
+        </li>
+        <li>
+          <img src="assets/images/icon-list.svg" alt="check-icon">
+          <p class="body-text">Measuring to ensure updates are a success</p>
+        </li>
+        <li>
+          <img src="assets/images/icon-list.svg" alt="check-icon">
+          <p class="body-text">And much more!</p>
+        </li>
+      </ul>
+
+      <!-- Form -->
+      <label for="email" id="label">
+        <p class="body-text-small">Email Address</p>
+      </label>
+      <input type="email" id="email" placeholder="email@company.com">
+
+      <!-- Button -->
+      <button id="btn-subscribe"><p class="body-text-bold">Subscribe to monthly newsletter</p></button>
+    </div>
+  </main>
+
+  <section class="confirmation-card">
+    <div class="description">
+      <!-- Icon -->
+      <img src="assets/images/icon-success.svg" class="" alt="success-icon">
+
+      <!-- Description -->
+      <header class="header-text pb-24  ">Thanks for subscribing!</header>
+      <p class="body-text"> 
+        A confirmation email has been sent to <span id="confirmationEmail" class="body-text-bold"></span> 
+        Please open it and click the button inside to confirm your
+        subscription.
+      </p>
+    </div>
+
+    <!-- Button -->
+    <button id="btn-dismiss"><p class="body-text-bold ">Dismiss message</p></button>
+  </section>
+
+</body>
+</html>
